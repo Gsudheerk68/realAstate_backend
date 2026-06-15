@@ -107,7 +107,7 @@ const Favorite = mongoose.model('Favorite', FavoriteSchema);
 const ActivitySchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
   userName: String,
-  userRole: { type: String, enum: ['buyer', 'seller'] },
+  userRole: { type: String, enum: ['buyer', 'seller', 'admin'] },
   action: {
     type: String,
     enum: ['login', 'logout', 'view_listing', 'save_favorite', 'unsave_favorite', 'post_listing', 'edit_listing', 'delete_listing', 'mark_sold', 'contact_seller'],
